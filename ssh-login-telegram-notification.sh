@@ -2,7 +2,7 @@
 USERID="Your Chat ID"
 
 # API Token bot
-TOKEN="Your Token ID"
+TOKEN="Your Token Id"
 
 TIMEOUT="10"
 
