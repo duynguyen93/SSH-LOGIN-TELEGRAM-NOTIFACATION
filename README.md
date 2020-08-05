@@ -19,8 +19,7 @@
 Clone or download source to /opt/ folder:
 
 > - git clone https://github.com/duynguyen93/ssh-login-telegram-notification.git
-- cd ssh-login-telegram-notification && cp -r ssh-login-telegram-notification.sh /etc/profile.d/
-- chmod +x /etc/profile.d/ssh-login-telegram-notification.sh
-- Change your TokenID, ChatID in: `/etc/profile.d/ssh-login-telegram-notification.sh`
+> - cd ssh-login-telegram-notification && cp -r ssh-login-telegram-notification.sh /etc/profile.d/
+> - chmod +x /etc/profile.d/ssh-login-telegram-notification.sh
+> - Change your TokenID, ChatID in: `/etc/profile.d/ssh-login-telegram-notification.sh`
 >
-
