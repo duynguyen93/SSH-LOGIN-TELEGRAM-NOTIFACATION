@@ -1,15 +1,15 @@
 # ID chat Telegram
-USERID="<target_user_id>"
+USERID="Your Chat ID"
 
 # API Token bot
-TOKEN="<bot_private_TOKEN>"
+TOKEN="Your Token ID"
 
 TIMEOUT="10"
 
-# URL send message
+# URL gửi tin nhắn của bot
 URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 
-# system time
+# Thời gian hệ thống
 DATE_EXEC="$(date "+%d %b %Y %H:%M")"
 
 # File temp
@@ -28,11 +28,12 @@ if [ -n "$SSH_CLIENT" ]; then
     COUNTRY=$(cat $TMPFILE | jq '.country' | sed 's/"//g')
     ORG=$(cat $TMPFILE | jq '.org' | sed 's/"//g')
 
-    # notification content
+    # Nội dung cảnh báo
     TEXT=$(echo -e "Thời gian: $DATE_EXEC\nUser: ${USER} logged in to $HOSTNAME($IPADDR) \nFrom $IP - $ORG - $CITY, $REGION, $COUNTRY on port $PORT")
 
-    # send notification
+    # Gửi cảnh báo
     curl -s -X POST --max-time $TIMEOUT $URL -d "chat_id=$USERID" -d text="$TEXT" > /dev/null
 
+    # Xóa file temp khi script thực hiện xong
     rm $TMPFILE
 fi
