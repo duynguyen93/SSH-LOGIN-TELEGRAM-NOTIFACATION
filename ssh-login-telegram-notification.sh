@@ -9,7 +9,7 @@ TIMEOUT="10"
 # URL gửi tin nhắn của bot
 URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 
-# Thời gian hệ thống
+# system time
 DATE_EXEC="$(date "+%d %b %Y %H:%M")"
 
 # File temp
